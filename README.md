@@ -59,6 +59,54 @@ O Jupyter Notebook contém as seguintes seções:
 9. **Exibir Resultados**: Exibição dos resultados da detecção de objetos na imagem de teste usando Matplotlib.
 10. **Inicializar e Processar Vídeo da Câmera**: Inicialização da câmera e processamento do vídeo em tempo real para detecção de sonolência usando o modelo YOLOv5.
 
+# Detecção de Sonolência Lógica Fuzzy
+
+Este projeto realiza a detecção de sonolência em tempo real utilizando uma câmera ou processando uma imagem estática. Ele emprega técnicas de visão computacional e inteligência artificial para analisar sinais de fadiga em um indivíduo.
+
+## Requisitos
+
+Certifique-se de ter o Python instalado e execute o seguinte comando para instalar as dependências necessárias:
+
+```bash
+pip install opencv-python numpy mediapipe torch scipy pyttsx3 scikit-fuzzy matplotlib
+```
+
+## Como Usar
+
+### Execução com Vídeo ao Vivo
+
+Para executar a detecção em tempo real usando a câmera, escolha o modo no main do arquivo fuzzy_logic.py `video`. 
+Modifique o índice da câmera no arquivo principal caso necessário:
+
+```bash
+cap = cv2.VideoCapture(0)  # 0 para câmera padrão
+```
+Execute:
+
+```bash
+python fuzzy_logic.py
+```
+ou:
+
+```bash
+py fuzzy_logic.py
+```
+### Execução com Imagem
+Para executar a detecção em tempo real usando a câmera, escolha o modo no main do arquivo fuzzy_logic.py `image`. 
+Defina o caminho:
+```bash
+ IMAGE_PATH = "img_test.jpg"  # Defina o caminho da imagem caso use o modo "image"
+```
+Execute:
+
+```bash
+python fuzzy_logic.py
+```
+ou:
+
+```bash
+py fuzzy_logic.py
+```
 ## Contribuições
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir *issues* e *pull requests* para melhorias e correções.
